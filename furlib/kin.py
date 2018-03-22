@@ -42,7 +42,7 @@ def dhs(a,alpha,d,theta):
     return M
 
 
-class Manipulator(object):
+class Robot(object):
     """
     Define un manipulador dados los parámetros de DH.
     """
@@ -193,6 +193,7 @@ def htmt(dx,dy,dz):
     
     
 if __name__=="__main__":
-    rr = Manipulator((0,pi/2,0,t1),(0,0,d2,0))
-    rr.plot_diagram({t1:pi/2,d2:100})
-    plt.show()
+    rr = Robot((0,pi/2,0,t1),(0,0,d2,0))
+    print(rr.T)
+    #rr.plot_diagram({t1:pi/2,d2:100})
+    #plt.show()
